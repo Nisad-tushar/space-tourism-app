@@ -1,0 +1,5 @@
+.secondHeading2 {
+  animation: fromTop 1s ease-in-out;
+  --height: translateY(120%);
+  backface-visibility: hidden;
+}

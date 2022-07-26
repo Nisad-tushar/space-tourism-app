@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
-import Navbar from '../Navbar/Navbar';
-import jsonData from '../data.json';
 
+import jsonData from '../data.json';
+import './Technology.scss';
 const Technology = () => {
   const [index, setIndex] = useState(0);
   const number = [1, 2, 3];
   const data = jsonData.technology[index];
-  console.log(data);
+
   const indexSetter = (num) => {
     setIndex(number.indexOf(num));
   };
   return (
-    <div className=" w-full h-full lg:bg-technology-desktop md:bg-technology-tablet bg-technology-mobile pb-7 bg-cover">
-      <Navbar />
-      <p className="uppercase lg:pl-36 md:pl-10 font-navtext lg:text-[28px] md:text-[20px] text-[16px] leading-[19px] tracking-[2.7px] lg:leading-[34px] md:leading-[24px] md:tracking-[3.38px]  lg:tracking-[4.725px] text-[#FFFFFF] lg:mt-5 md:mt-8 md:text-left text-center mb-10">
+    <div className=" w-full min lg:bg-technology-desktop md:bg-technology-tablet bg-technology-mobile pb-7 bg-cover">
+      <p className="grow uppercase lg:pl-36 md:pl-10 font-navtext lg:text-[28px] md:text-[20px] text-[16px] leading-[19px] tracking-[2.7px] lg:leading-[34px] md:leading-[24px] md:tracking-[3.38px]  lg:tracking-[4.725px] text-[#FFFFFF]   md:text-left text-center mb-10 pt-36">
         <span className="font-bold opacity-25 mix-blend-normal mr-1">03 </span>
         space launch 101
       </p>
@@ -22,7 +21,7 @@ const Technology = () => {
           <div className=" flex lg:flex-col gap-5">
             {number.map((num) => (
               <p
-                className={`font-bellefair flex items-center justify-center lg:w-[80px] lg:h-[80px] w-[60px] h-[60px]  border-[0.1px] ${
+                className={`spin font-bellefair flex items-center justify-center lg:w-[80px] lg:h-[80px] w-[60px] h-[60px]  border-[0.1px] ${
                   index === number.indexOf(num)
                     ? 'bg-white text-[#0B0D17]'
                     : 'bg-transparent text-white hover:bg-[#D0DBD6] hover:bg-opacity-50 transition-all duration-100 ease-in-out'
@@ -35,13 +34,13 @@ const Technology = () => {
           </div>
           <div className="w-full flex items-center justify-center ">
             <div className=" flex flex-col lg:items-start md:items-center lg:gap-3 gap-5">
-              <p className="uppercase font-navtext text-[16px] leading-[19px] tracking-[2.7px] text-[#D0D6F9] lg:text-left text-center">
+              <p className="info uppercase font-navtext text-[16px] leading-[19px] tracking-[2.7px] text-[#D0D6F9] lg:text-left text-center">
                 The Technology
               </p>
-              <p className="font-bellefair lg:text-[56px] lg:leading-[64px] md:text-[40px] text-[35px] leading-[46px] text-white uppercase whitespace-nowrap lg:text-left text-center">
+              <p className="heading font-bellefair lg:text-[56px] lg:leading-[64px] md:text-[40px] text-[35px] leading-[46px] text-white uppercase whitespace-nowrap lg:text-left text-center">
                 {data.name}
               </p>
-              <p className="font-navtext lg:text-[18px] lg:leading-[32px] md:text-[20px] text-[18px] leading-[28px] tracking-wider text-[#D0D6F9] lg:max-w-sm lg:text-left max-w-md text-center md:px-0 px-2">
+              <p className="grow font-navtext lg:text-[18px] lg:leading-[32px] md:text-[20px] text-[18px] leading-[28px] tracking-wider text-[#D0D6F9] lg:max-w-sm lg:text-left max-w-md text-center md:px-0 px-2">
                 {data.description}
               </p>
             </div>
@@ -49,7 +48,7 @@ const Technology = () => {
         </div>
         <div
           style={{ backgroundImage: `url(${data.images.portrait})` }}
-          className="hidden md:visible md:flex w-[700px] h-[470px] bg-cover items-center justify-end mix-blend-normal"
+          className="heading hidden md:visible md:flex w-[700px] h-[470px] bg-cover items-center justify-end mix-blend-normal"
         />{' '}
         <div
           style={{ backgroundImage: `url(${data.images.landscape})` }}

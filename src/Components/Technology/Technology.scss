@@ -1,0 +1,16 @@
+.spin:nth-child(odd) {
+  animation: slide 1s ease-in-out;
+  --width: translateY(-80%);
+  backface-visibility: hidden;
+}
+.spin:nth-child(even) {
+  animation: slide 1s ease-in-out;
+  --width: translateY(80%);
+  backface-visibility: hidden;
+}
+
+@keyframes slide {
+  0% {
+    transform: var(--width);
+  }
+}
