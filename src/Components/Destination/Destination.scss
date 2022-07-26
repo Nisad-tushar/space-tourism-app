@@ -1,3 +1,17 @@
+.bgDestination {
+  background-image: url('../../Assets/destination/background-destination-desktop.jpg');
+}
+
+@media (min-width: 1024px) {
+  .bgDestination {
+    background-image: url('../../Assets/destination/background-destination-desktop.jpg');
+  }
+}
+@media (min-width: 768px) {
+  .bgDestination {
+    background-image: url('../../Assets/destination/background-destination-tablet.jpg');
+  }
+}
 .secondHeading2 {
   animation: fromTop 1s ease-in-out;
   --height: translateY(120%);

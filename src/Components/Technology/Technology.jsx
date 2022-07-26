@@ -11,7 +11,7 @@ const Technology = () => {
     setIndex(number.indexOf(num));
   };
   return (
-    <div className=" w-full min lg:bg-technology-desktop md:bg-technology-tablet bg-technology-mobile pb-7 bg-cover">
+    <div className=" w-full  pb-7 bg bg-cover">
       <p className="grow uppercase lg:pl-36 md:pl-10 font-navtext lg:text-[28px] md:text-[20px] text-[16px] leading-[19px] tracking-[2.7px] lg:leading-[34px] md:leading-[24px] md:tracking-[3.38px]  lg:tracking-[4.725px] text-[#FFFFFF]   md:text-left text-center mb-10 pt-36">
         <span className="font-bold opacity-25 mix-blend-normal mr-1">03 </span>
         space launch 101
@@ -21,6 +21,7 @@ const Technology = () => {
           <div className=" flex lg:flex-col gap-5">
             {number.map((num) => (
               <p
+                key={number.indexOf(num)}
                 className={`spin font-bellefair flex items-center justify-center lg:w-[80px] lg:h-[80px] w-[60px] h-[60px]  border-[0.1px] ${
                   index === number.indexOf(num)
                     ? 'bg-white text-[#0B0D17]'

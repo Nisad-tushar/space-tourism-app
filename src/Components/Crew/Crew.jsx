@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import { BsCircle } from 'react-icons/bs';
 import { useInView } from 'react-intersection-observer';
 import jsonData from '../data.json';
+import './Crew.scss';
 const Crew = () => {
   const [index, setIndex] = useState(0);
   const dataSetter = (icon) => {
@@ -14,7 +15,7 @@ const Crew = () => {
   const data = jsonData.crew[index];
   const icons = [<BsCircle />, <BsCircle />, <BsCircle />, <BsCircle />];
   return (
-    <div className="min-h-screen w-full lg:bg-crew-desktop md:bg-crew-tablet bg-crew-mobile bg-cover">
+    <div className="min-h-screen w-full bgCrew bg-cover">
       <p className="secondHeading uppercase lg:pl-36 md:pl-10 font-navtext lg:text-[28px] md:text-[20px] text-[16px] leading-[19px] tracking-[2.7px] lg:leading-[34px] md:leading-[24px] md:tracking-[3.38px]  lg:tracking-[4.725px] text-[#FFFFFF]  md:text-left text-center mb-10 pt-36">
         <span className="font-bold opacity-25 mix-blend-normal mr-1">02 </span>
         Meet your crew
@@ -41,6 +42,7 @@ const Crew = () => {
             <div className=" flex  gap-4 lg:mt-14 md:mt-10 lg:top-[580px] md:top-[460px] top-[430px] md:mb-5">
               {icons.map((icon) => (
                 <p
+                  key={icons.indexOf(icon)}
                   className={`${
                     index === icons.indexOf(icon)
                       ? 'bg-white'

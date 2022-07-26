@@ -8,7 +8,7 @@ import Technology from './Components/Technology/Technology';
 
 function App() {
   return (
-    <div className="w-full min-h-screen h-full">
+    <div className="w-full min-h-screen h-full bg-[#0b0e17]">
       <Navbar />
 
       <Routes>

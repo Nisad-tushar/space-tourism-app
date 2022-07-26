@@ -23,7 +23,7 @@ const Destination = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-destination-desktop bg-cover ">
+    <div className="w-full min-h-screen bgDestination bg-cover ">
       <div className="flex flex-col justify-between gap-20  md:px-[20px] ">
         <div className=" flex  font-navtext md:text-[28px] text-[16px] tracking-[4.72px] leading-[34px] uppercase md:ml-20 gap-4 justify-center md:justify-start mt-36">
           <p className=" text-white font-bold opacity-25 mix-blend-normal">

@@ -1,0 +1,14 @@
+.bgCrew {
+  background-image: url('../../Assets/crew/background-crew-desktop.jpg');
+}
+
+@media (min-width: 1024px) {
+  .bgCrew {
+    background-image: url('../../Assets/crew/background-crew-desktop.jpg');
+  }
+}
+@media (min-width: 768px) {
+  .bgCrew {
+    background-image: url('../../Assets/crew/background-crew-tablet.jpg');
+  }
+}

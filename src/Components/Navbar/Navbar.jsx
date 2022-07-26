@@ -64,14 +64,14 @@ const Navbar = () => {
         </div>
         {menuOpen === 'right-[-254px]' && (
           <GiHamburgerMenu
-            className="text-white w-[40px] h-[40px] z-30 cursor-pointer"
+            className="fixed right-5 text-white w-[40px] h-[40px] z-30 cursor-pointer"
             onClick={() => setMenuOpen('right-0')}
           />
         )}
 
         {menuOpen && (
           <div
-            className={`fixed w-[254px] min-h-screen bg-[#FFFFFF0A] backdrop-blur-[81.5485px] ml-auto ${menuOpen} bottom-0 z-50 stroke-[#979797] transition-[width,.4s,ease-in-Out]`}
+            className={`fixed w-[254px] min-h-screen bg-[#0d0f1d] bg-opacity-80 backdrop-blur-[81.5485px] ml-auto ${menuOpen} bottom-0 z-50 stroke-[#979797] transition-[width,.4s,ease-in-Out]`}
           >
             <div className="w-[80px] h-[80px] top-0 right-0 ml-auto">
               <HiX
@@ -82,7 +82,7 @@ const Navbar = () => {
             <ul className="flex flex-col justify-center text-white gap-[30px] text-[18px] tracking-[4px] py-[40px] pl-8">
               {categories.map((category) => {
                 return (
-                  <NavLink to={category.to}>
+                  <NavLink to={category.to} key={category.name}>
                     <div
                       className="group"
                       onClick={() => setMenuOpen('right-[-254px]')}
